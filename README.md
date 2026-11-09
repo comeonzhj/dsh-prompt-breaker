@@ -20,10 +20,11 @@ AGENT: read → bash → edit → bash → write
 
 ### From the DSH Web UI / agent
 
-Install this GitHub repository as a profile bundle:
+Install this GitHub repository as a profile bundle. The archive URL is the
+most firewall-friendly form and is the one verified for this release:
 
 ```text
-github:comeonzhj/dsh-prompt-breaker
+https://github.com/comeonzhj/dsh-prompt-breaker/archive/refs/tags/v1.1.0.tar.gz
 ```
 
 In the Plugins page, use the add/install action with that spec. An agent with
@@ -32,19 +33,21 @@ the `plugin_manager` tool can do the same:
 ```json
 {
   "action": "install_bundle",
-  "target": "github:comeonzhj/dsh-prompt-breaker"
+  "target": "https://github.com/comeonzhj/dsh-prompt-breaker/archive/refs/tags/v1.1.0.tar.gz"
 }
 ```
 
-The HTTPS form works too:
-`https://github.com/comeonzhj/dsh-prompt-breaker`.
+DSH also accepts a Git repository address (`github:comeonzhj/dsh-prompt-breaker`
+or `https://github.com/comeonzhj/dsh-prompt-breaker`). DSH probes GitHub for up
+to 5 seconds before a Git install; on a slow link, use the archive URL above
+instead.
 
 ### From the CLI
 
 On a profile that is not managed exclusively by the Desktop app:
 
 ```bash
-dsh plugin --profile <profile> add github:comeonzhj/dsh-prompt-breaker
+dsh plugin --profile <profile> add https://github.com/comeonzhj/dsh-prompt-breaker/archive/refs/tags/v1.1.0.tar.gz
 ```
 
 Refresh the DSH Web page after installation so the new Client module is loaded.
