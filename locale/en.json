@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Prompt breaker",
+    "description": "Turns each prompt into a brick wall and fires one shot per agent tool call."
+  }
+}

@@ -1,0 +1,3 @@
+- insert:
+    - id: prompt-breaker
+      name: 'dsh-prompt-breaker'

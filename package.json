@@ -1,0 +1,53 @@
+{
+  "name": "dsh-prompt-breaker",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A DSH arcade: turn each prompt into a brick wall and fire one shot per agent tool call.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-session"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "ZhangJia (https://github.com/comeonzhj)",
+  "homepage": "https://github.com/comeonzhj/dsh-prompt-breaker#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comeonzhj/dsh-prompt-breaker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/comeonzhj/dsh-prompt-breaker/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "arcade",
+    "brick-breaker",
+    "ui"
+  ]
+}
